@@ -1,0 +1,4 @@
+__pycache__/**
+log.txt
+audio/**
+config_private.py
