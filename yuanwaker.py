@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 import snowboydecoder
 import sys
 import signal
@@ -15,12 +17,10 @@ def interrupt_callback():
     return interrupted
 
 
-if len(sys.argv) == 1:
-    print("Error: need to specify model name")
-    print("Usage: python demo.py your.model")
-    sys.exit(-1)
+model = f'{sys.path[0]}/resources/models/小源小源.pmdl'
+if len(sys.argv) == 2:
+    model = sys.argv[1]
 
-model = sys.argv[1]
 
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
