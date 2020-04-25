@@ -32,6 +32,14 @@ def command_handler(command):
         subprocess.Popen('google-chrome-stable')
         response('正在打开chrome')
 
+    elif '打开QQ' in command:
+        subprocess.Popen('google-chrome-stable')
+        response('正在打开chrome')
+    
+    elif '网易云音乐' in command:
+        subprocess.Popen('netease-cloud-music')
+        response('正在打开网易云音乐')
+
     elif '管理路由器' in command:
         subprocess.Popen('google-chrome-stable --new-window  192.168.2.1'.split())
         response('正在打开luci')
